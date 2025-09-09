@@ -1,0 +1,8 @@
+1. Truy cập Neondb để tạo 1 db đám mây
+2. truy cập drizzle để thực hiện hỗ trợ truy cập db với neon 
+3. tạo scheme, table cho ứng dụng
+4. package.json
+    "db:generate": "drizzle-kit generate" : kiểm tra thông tin liên quan đến db
+    "db:migrate": "drizzle-kit migrate" : tạo migrate từ scheme
+    "db:studio": "drizzle-kit studio" : tạo db trên đám mây
+    Câu lệnh cho phép thực hiện tạo db từ scheme

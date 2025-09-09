@@ -1,0 +1,8 @@
+1.Tạo trang hiển thị các sự kiện cá nhân
+
+2. Tạo trang Create Event
+Sử dụng form để thực hiện Create
+sử dụng form của shadcn để tạo form
+Sử dụng thư viện zod -> cho phép tạo schemas -> từ đó validate data
+
+useTransition() Hook

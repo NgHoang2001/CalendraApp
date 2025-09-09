@@ -1,0 +1,33 @@
+1. (auth): có tác dụng gì?
+-kn: Route Group - nhóm tuyến đường, cấu hình nhóm các route có liên quan đến nhau mà không ảnh hưởng đến url thực thế
+- tác dụng:
+    + tổ chức mã nguồn: nhóm các logic có liên quan đến nhau
+    + tách biệt logic: tách biệt logic cho từng loại nhóm
+    + tính linh hoạt
+
+Vd:
+app/
+├── (auth)/
+│   ├── login/
+│   │   └── page.tsx
+│   ├── register/
+│   │   └── page.tsx
+│   └── layout.tsx
+├── dashboard/
+│   └── page.tsx
+
+URL /login sẽ tương ứng với (auth)/login/page.tsx.
+URL /register sẽ tương ứng với (auth)/register/page.tsx.
+Tệp layout.tsx trong (auth) chỉ áp dụng cho các tuyến đường trong nhóm (auth) (như /login, /register).
+
+2. Thư mục [[...login]]
+-kn: 1 Dynamic route (Tuyến đường động) kiểu Catch-all Route
+- [[...login]]: sẽ khớp với bất kỳ URL nào bắt đầu từ /login và các đoạn sau đó.
+/login → Khớp.
+/login/step1 → Khớp.
+/login/step1/step2 → Khớp.
+
+- [...login]: chỉ khớp với url có phần trước là /login/something -> bắt buộc đầu là login và sau phải có giá trị
+/login → Không khớp.
+/login/step1 → Khớp.
+/login/step1/step2 → Khớp.

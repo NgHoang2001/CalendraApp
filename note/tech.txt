@@ -1,0 +1,5 @@
+clerk: authen + author
+shadcn: có sẵn các comp chứa UI
+drizzle: db
+neon: db cloud
+zod libary: validate data
