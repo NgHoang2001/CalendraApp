@@ -3,7 +3,7 @@
 ## I. Giới thiệu & Tổng quan
 
 **Mục tiêu:**  
-Xây dựng ứng dụng lên lịch cuộc họp full-stack giống Calendly, cho phép người dùng quản lý thời gian, tạo sự kiện và để người khác đặt lịch một cách dễ dàng.
+Xây dựng ứng dụng lên lịch cuộc họp giống Calendly, cho phép người dùng quản lý thời gian, tạo sự kiện và để người khác đặt lịch một cách dễ dàng.
 
 **Tính năng chính:**
 - Trang landing page hiện đại, hấp dẫn
