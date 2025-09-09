@@ -26,9 +26,9 @@ export default function PublicProfile({ userId, fullName }: PublicProfileProps) 
     const copyProfileUrl = async () => {
         try {
             await navigator.clipboard.writeText(`${window.location.origin}/book/${userId}`)
-            toast("Profile URL copied to clipboard!")
+            toast("Địa chỉ hồ sơ đã sao chép!")
         } catch (error) {
-            console.error("Failed to copy URL:", error)
+            console.error("Sao chép URL thất bại:", error)
         }
     }
 
@@ -65,7 +65,7 @@ export default function PublicProfile({ userId, fullName }: PublicProfileProps) 
                 // Info message with Eye icon (for profile owner only)
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4 font-bold">
                     <Eye className="w-4 h-4" />
-                    <p>This is how people will see your public profile</p>
+                    <p>Đây là cách mọi người sẽ thấy hồ sơ công khai của bạn</p>
                 </div>
             )}
 
@@ -83,7 +83,7 @@ export default function PublicProfile({ userId, fullName }: PublicProfileProps) 
                         onClick={copyProfileUrl}
                     >
                         <Copy className="size-4" />
-                        Copy Public Profile URL
+                        Sao chép URL hồ sơ công khai
                     </Button>
                 </div>
             )}
@@ -91,16 +91,16 @@ export default function PublicProfile({ userId, fullName }: PublicProfileProps) 
             {/* Welcome message */}
             <div className="text-muted-foreground mb-6 max-w-sm mx-auto text-center">
                 <p className="font-bold text-2xl">
-                    Time to meet!🧑‍🤝‍🧑
+                    Thời gian để gặp nhau!🧑‍🤝‍🧑
                 </p>
-                <br /> Pick an event and let’s make it official by booking a time.
+                <br /> Chọn một sự kiện và để cho nó làm cho nó chính thức bằng cách đặt một thời gian.
             </div>
 
 
             {/* Grid of public event cards */}
             {events.length === 0 ? (
                 <div className="text-center text-muted-foreground">
-                    No events available at the moment.
+                    Không có sự kiện có sẵn tại thời điểm này.
                 </div>
             ) : (
                 <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">

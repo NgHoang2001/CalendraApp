@@ -19,7 +19,7 @@ export async function createMeeting(
 
         // If validation fails, throw an error
         if (!success) {
-            throw new Error("Invalid data.");
+            throw new Error("Dữ liệu không hợp lệ.");
         }
 
         // Try to find the event in the database that matches the provided IDs and is active
@@ -34,7 +34,7 @@ export async function createMeeting(
 
         // If no matching event is found, throw an error
         if (!event) {
-            throw new Error("Event not found.");
+            throw new Error("Không tìm thấy sự kiện .");
         }
 
         // Interpret the start time as being in the user's timezone and convert it to a UTC Date
@@ -45,7 +45,7 @@ export async function createMeeting(
 
         // If the selected time is not valid, throw an error
         if (validTimes.length === 0) {
-            throw new Error("Selected time is not valid.");
+            throw new Error("Thời gian đã chọn không hợp lệ.");
         }
 
         // Create the Google Calendar event with all necessary details
@@ -58,8 +58,8 @@ export async function createMeeting(
         return { clerkUserId: data.clerkUserId, eventId: data.eventId, startTime: data.startTime }
     } catch (error: any) {
         // Log the error message (or handle it based on your need)
-        console.error(`Error creating meeting: ${error.message || error}`);
+        console.error(`Lỗi tạo cuộc họp: ${error.message || error}`);
         // Optionally throw the error to be handled further upstream
-        throw new Error(`Failed to create meeting: ${error.message || error}`);
+        throw new Error(`Tạo cuộc họp mới thất bại: ${error.message || error}`);
     }
 }

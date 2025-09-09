@@ -81,7 +81,7 @@ export default function MeetingForm({
         } catch (error: any) {
             // Handle any error that occurs during the meeting creation
             form.setError("root", {
-                message: `There was an unknown error saving your event ${error.message}`,
+                message: `Có một lỗi không xác định để lưu sự kiện của bạn ${error.message}`,
             })
         }
     }
@@ -139,7 +139,7 @@ export default function MeetingForm({
                         render={({ field }) => (
                             <Popover>
                                 <FormItem className="flex-1">
-                                    <FormLabel>Date</FormLabel>
+                                    <FormLabel>Ngày</FormLabel>
                                     <PopoverTrigger asChild>
                                         <FormControl>
                                             <Button
@@ -152,7 +152,7 @@ export default function MeetingForm({
                                                 {field.value ? (
                                                     formatDate(field.value)
                                                 ) : (
-                                                    <span>Pick a date</span>
+                                                    <span>Chọn một ngày</span>
                                                 )}
                                                 <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                                             </Button>
@@ -169,7 +169,7 @@ export default function MeetingForm({
                                                     isSameDay(date, time)
                                                 )
                                             }
-                                            initialFocus
+                                            autoFocus
                                         />
                                     </PopoverContent>
                                     <FormMessage />
@@ -184,7 +184,7 @@ export default function MeetingForm({
                         name="startTime"
                         render={({ field }) => (
                             <FormItem className="flex-1">
-                                <FormLabel>Time</FormLabel>
+                                <FormLabel>Thời gian</FormLabel>
                                 <Select
                                     disabled={date == null || timezone == null}
                                     onValueChange={value =>
@@ -197,8 +197,8 @@ export default function MeetingForm({
                                             <SelectValue
                                                 placeholder={
                                                     date == null || timezone == null
-                                                        ? "Select a date/timezone first"
-                                                        : "Select a meeting time"
+                                                        ? "Chọn một ngày/timezone đầu tiên"
+                                                        : "Chọn thời gian họp"
                                                 }
                                             />
                                         </SelectTrigger>
@@ -230,7 +230,7 @@ export default function MeetingForm({
                         name="guestName"
                         render={({ field }) => (
                             <FormItem className="flex-1">
-                                <FormLabel>Your Name</FormLabel>
+                                <FormLabel>Tên của bạn</FormLabel>
                                 <FormControl>
                                     <Input {...field} />
                                 </FormControl>
@@ -245,7 +245,7 @@ export default function MeetingForm({
                         name="guestEmail"
                         render={({ field }) => (
                             <FormItem className="flex-1">
-                                <FormLabel>Your Email</FormLabel>
+                                <FormLabel>Email của bạn</FormLabel>
                                 <FormControl>
                                     <Input type="email" {...field} />
                                 </FormControl>
@@ -261,7 +261,7 @@ export default function MeetingForm({
                     name="guestNotes"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Notes</FormLabel>
+                            <FormLabel>Ghi chú</FormLabel>
                             <FormControl>
                                 <Textarea className="resize-none" {...field} />
                             </FormControl>
@@ -278,13 +278,13 @@ export default function MeetingForm({
                         asChild
                         variant="outline"
                     >
-                        <Link href={`/book/${clerkUserId}`}>Cancel</Link>
+                        <Link href={`/book/${clerkUserId}`}>Hủy bỏ</Link>
                     </Button>
                     <Button
                         className="cursor-pointer hover:scale-105 bg-blue-400 hover:bg-blue-600"
                         disabled={form.formState.isSubmitting}
                         type="submit">
-                        Book Event
+                        Đặt lịch
                     </Button>
                 </div>
             </form>

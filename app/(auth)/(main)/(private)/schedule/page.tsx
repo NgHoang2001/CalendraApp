@@ -20,7 +20,7 @@ export default async function SchedulePage() {
     return (
         <Card className="max-w-md mx-auto border-8 border-blue-200 shadow-2xl shadow-accent-foreground">
             <CardHeader>
-                <CardTitle>Schedule</CardTitle> {/* Display title for the page */}
+                <CardTitle>Lịch</CardTitle> {/* Display title for the page */}
             </CardHeader>
             <CardContent>
                 <ScheduleForm schedule={schedule} />

@@ -33,10 +33,8 @@ export default function PublicEventCard({
             {description && <CardContent>{description}</CardContent>}
             <CardFooter className="flex justify-end gap-2 mt-auto">
                 {/* Select button that links to the booking page for the specific event */}
-                <Button
-                    className="cursor-pointer hover:scale-105 bg-blue-400 hover:bg-blue-600"
-                    asChild>
-                    <Link href={`/book/${clerkUserId}/${id}`}>Select</Link>
+                <Button className="cursor-pointer hover:scale-105 bg-blue-400 hover:bg-blue-600" asChild>
+                    <Link href={`/book/${clerkUserId}/${id}`}>Chọn</Link>
                 </Button>
             </CardFooter>
         </Card>

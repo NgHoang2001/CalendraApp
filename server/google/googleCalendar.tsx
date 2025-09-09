@@ -149,7 +149,7 @@ export async function createCalendarEvent({
                         responseStatus: "accepted", // Mark the user's attendance as accepted.
                     },
                 ],
-                description: guestNotes ? `Additional Details: ${guestNotes}` : "No additional details.", // Add description if guest notes are provided.
+                description: guestNotes ? `Chi tiết bổ sung: ${guestNotes}` : "Không có chi tiết bổ sung.", // Add description if guest notes are provided.
                 start: {
                     dateTime: startTime.toISOString(), // Start time of the event.
                 },

@@ -20,7 +20,7 @@ export default function PublicNavbar() {
                         <Button >Login</Button>
                     </SignInButton>
                     <SignOutButton>
-                        <Button variant='outline'>Register</Button>
+                        <Button variant='outline'>Đăng Ký</Button>
                     </SignOutButton>
                 </div>
             </section>

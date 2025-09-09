@@ -12,8 +12,8 @@ export default function LandingPage() {
                     height={300}
                     alt="Logo"
                 />
-                <h1 className="text-2xl font-black lg:text-3xl">Your time, perfectly planned</h1>
-                <p className="font-extralight">Join millions of professionals who easily book meetings with the #1 scheduling tool</p>
+                <h1 className="text-2xl font-black lg:text-3xl">Thời gian của bạn, được lên kế hoạch hoàn hảo</h1>
+                <p className="font-extralight">Tham gia hàng với chúng tôi, mọi người dễ dàng đặt các cuộc họp với công cụ lập kế hoạch số #1</p>
                 <Image
                     src='/assets/planning.svg'
                     width={500}

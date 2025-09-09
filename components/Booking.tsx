@@ -7,7 +7,7 @@ const Booking = () => {
             <BlinkBlur
                 color={["#32cd32", "#327fcd", "#cd32cd", "#cd8032"]}
                 size="large"
-                text="Booking Event, don't click on anything⛔⛔..."
+                text="Sự kiện đang lên lịch, đừng nhấp vào bất cứ điều gì⛔⛔..."
                 textColor="black"
             />
         </div>

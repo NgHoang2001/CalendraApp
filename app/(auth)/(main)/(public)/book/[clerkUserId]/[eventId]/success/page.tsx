@@ -23,7 +23,7 @@ export default async function SuccessPage({
     if (!event) return (
         <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-md flex items-center gap-2 text-sm max-w-md mx-auto mt-6">
             <AlertTriangle className="w-5 h-5" />
-            <span>This event doesn't exist anymore.</span>
+            <span>Sự kiện này không còn tồn tại nữa.</span>
         </div>
     )
 
@@ -39,15 +39,14 @@ export default async function SuccessPage({
         <Card className="max-w-xl mx-auto border-8 border-blue-200 shadow-2xl shadow-accent-foreground">
             <CardHeader>
                 <CardTitle>
-                    ✅Successfully Booked {event.name} with {calendarUser.fullName}
+                    ✅Đặt thành công {event.name} với {calendarUser.fullName}
                 </CardTitle>
                 {/* Format and display the booking date/time */}
                 <CardDescription>{formatDateTime(startTimeDate)}</CardDescription>
             </CardHeader>
             <CardContent>
                 {/* Inform the user that a confirmation email is on its way */}
-                You should receive an email confirmation shortly. You can safely close
-                this page now.
+                Bạn sẽ sớm nhận được xác nhận email. Bạn có thể đóng trang này ngay bây giờ.
             </CardContent>
         </Card>
     )

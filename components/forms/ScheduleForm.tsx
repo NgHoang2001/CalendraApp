@@ -94,7 +94,7 @@ export function ScheduleForm({
                     name="timezone"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Timezone</FormLabel>
+                            <FormLabel>Khoảng thời gian</FormLabel>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
                                     <SelectTrigger>
